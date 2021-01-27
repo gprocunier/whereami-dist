@@ -1,0 +1,18 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: whereami
+  labels:
+    name: whereami
+
+spec:
+  host: whereami
+  to:
+    kind: Service
+    name: whereami
+    weight: 100
+  port:
+    targetPort: 8080
+  tls:
+    termination: edge
+  wildcardPolicy: None
