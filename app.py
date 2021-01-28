@@ -20,9 +20,17 @@ def send_js(path):
 @app.route("/api/whereami")
 def whereami():
     ip = requests.get('https://api.ipify.org').text
-    w = IPWhois(ip)
+    w = IPWhois(ip).lookup_whois()
 
-    return jsonify({"public_ip": ip, "whereami": w.lookup_whois()})
+    print("public_ip: " + ip)
+    print("provider:" + w['nets'][0]['description'])
+    print("asn: " + w['asn'])
+
+    return jsonify({
+        "public_ip": ip,
+        "provider": w['nets'][0]['description'],
+        "asn": w['asn']
+    })
 
 
 app.run(host="0.0.0.0", port=8080)
