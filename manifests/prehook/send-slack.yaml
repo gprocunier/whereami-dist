@@ -1,0 +1,7 @@
+apiVersion: tower.ansible.com/v1alpha1
+kind: AnsibleJob
+metadata:
+  name: send-slack
+spec:
+  job_template_name: send-slack
+  tower_auth_secret: tower-secret
