@@ -1,7 +1,7 @@
 apiVersion: tower.ansible.com/v1alpha1
 kind: AnsibleJob
 metadata:
-  name: send-slack
+  name: send-slack-start
 spec:
   extra_vars:
     message: "Le déploiement est commencé sur "
