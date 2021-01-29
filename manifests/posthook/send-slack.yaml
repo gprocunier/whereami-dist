@@ -4,6 +4,6 @@ metadata:
   name: send-slack
 spec:
   extra_vars:
-    message: "Le déploiement est commencé sur "
+    message: "Le déploiement est terminé sur "
   job_template_name: send-slack
   tower_auth_secret: tower-secret
