@@ -1,7 +1,7 @@
 apiVersion: tower.ansible.com/v1alpha1
 kind: AnsibleJob
 metadata:
-  name: send-slack-end
+  name: 2-send-slack-end
 spec:
   extra_vars:
     message: "Le déploiement est terminé sur "

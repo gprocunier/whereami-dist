@@ -1,7 +1,7 @@
 apiVersion: tower.ansible.com/v1alpha1
 kind: AnsibleJob
 metadata:
-  name: update-route53
+  name: 1-update-route53
 spec:
   job_template_name: update-route53-cname
   tower_auth_secret: tower-secret
